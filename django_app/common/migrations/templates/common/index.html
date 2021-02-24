@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>My Awesome Django site loaded from Common App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'common/css/styles.css' %}">
+</head>
+
+<body>
+<h1>Hello Django!</h1>
+
+<p>So far what we have going on are:
+    <ul>
+    <li>The default <a href="/admin">admin site</a>, with whatever we add to it.</li>
+    <li>The <a href="{% url 'polls:index' %}">Polls tutorial</a>. </li>
+</ul>
+
+</p>
+</body>
+</html>

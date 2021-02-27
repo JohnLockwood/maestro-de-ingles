@@ -1,0 +1,43 @@
+version: '3'
+
+tasks:
+
+  test:
+    desc: Runs all the tests
+    cmds:
+      - task: back:test
+
+  # Real tasks
+  back:test:
+    desc: Runs Django tests, first refreshing venv if needed
+    deps: [back:venv]
+    dir:  django_app
+    env:
+      DJANGO_SETTINGS_MODULE:  django_app.settings
+
+    cmds:      
+      # - source ./venv/bin/activate
+      - pytest 
+
+  back:venv:
+    desc: Refreshes venv if not in sync with requirements.txt
+    generates:
+      - django_app/venv/**
+    sources:
+      - django_app/requirements.txt
+    cmds:
+      - deactivate || true
+      - python -m venv django_app/venv
+      - source django_app/venv/bin/activate
+      - pip install -r django_app/requirements.txt
+
+# Silly tests I wrote at first
+  hello:
+    - task: greet
+      vars: {GREET_TARGET:  "Johnsin"}
+
+  greet:
+    vars:
+      GREET_TARGET: '{{default "World" .GREET_TARGET}}'
+    cmds:
+      - echo "Hello, {{.GREET_TARGET}}!"

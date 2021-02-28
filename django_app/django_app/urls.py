@@ -22,5 +22,6 @@ app_name = 'django_app'
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+    path('learn', include('learn.urls')),
     path('', common.views.index, name='index')
 ]

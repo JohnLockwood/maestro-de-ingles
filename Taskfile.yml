@@ -41,3 +41,18 @@ tasks:
       GREET_TARGET: '{{default "World" .GREET_TARGET}}'
     cmds:
       - echo "Hello, {{.GREET_TARGET}}!"
+
+  postgres:
+    # Based on https://info.crunchydata.com/blog/easy-postgresql-12-and-pgadmin-4-setup-with-docker
+    desc: Sets up a postgres database in docker and pgadmin
+    cmds:
+      - docker network create --driver bridge pgnetwork
+      - docker run --publish 5432:5432 --volume=postgres:/pgdata --env-file=secret/pg-env.list --name="postgres" --hostname="postgres" --network="pgnetwork" --detach registry.developers.crunchydata.com/crunchydata/crunchy-postgres:centos7-12.2-4.2.2
+      - docker run --publish 5050:5050 --volume=pgadmin4:/var/lib/pgadmin --env-file=secret/pgadmin-env.list --name="pgadmin4" --hostname="pgadmin4" --network="pgnetwork" --detach registry.developers.crunchydata.com/crunchydata/crunchy-pgadmin4:centos7-12.2-4.2.2
+    status:
+      - docker network ls | grep pgnetwork
+    preconditions:
+      - test -f secret/pgadmin-env.list
+      - test -f secret/pg-env.list
+  
+

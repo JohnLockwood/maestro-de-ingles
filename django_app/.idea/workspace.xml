@@ -8,17 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cade1850-6ec3-4854-9b1e-1a78eb70e0a5" name="maestro-de-ingles-1 Test issue for Pycharm" comment="">
-      <change beforePath="$PROJECT_DIR$/../Taskfile.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Taskfile.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/django_app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/templates/common/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/templates/common/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <list id="f6a09c30-afc9-48d0-bfd2-bc3cb6f334e0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />

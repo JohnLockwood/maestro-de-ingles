@@ -1,4 +1,5 @@
-<html>
+<!-- #TODO this should be lang="es" eventually -->
+<html lang="en">
 <head>
     <title>Maestro-de-ingles?</title>
     {% load static %}
@@ -8,17 +9,20 @@
 <body>
 <h1>Hello Django!</h1>
 <em>This is being served from the "common" app.</em>
-<p>So far what we have going on are some tutorial business:
-    <ul>
+<p>
+    So far what we have going on are some tutorial business:
+</p>
+<ul>
     <li>The default <a href="/admin">admin site</a>, with whatever we add to it.</li>
-    <li>The <a href="{% url 'polls:index' %}">Polls tutorial</a>. </li>
+    <li>The <a href="{% url 'polls:index' %}">Polls tutorial</a>.</li>
+    <li>For debugging, here's <a href="http://localhost:5050">PGAdmin</a></li>
 </ul>
 
 <h2>The Good Stuff</h2>
 <p>
-    But wait, there's more!  There's a new Django App with hardly anything in it -- <a href="{% url 'learn:index' %}">Maestro-De-Ingles or whatever.
+    But wait, there's more! There's a new Django App with hardly anything in it -- <a href="{% url 'learn:index' %}">Maestro-De-Ingles</a>
+    or whatever.
 </p>
 
-</p>
 </body>
 </html>

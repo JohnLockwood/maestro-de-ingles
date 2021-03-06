@@ -132,5 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
+
+# Location of uploaded media, e.g. audio.
+MEDIA_URL = './media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)

@@ -8,7 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cade1850-6ec3-4854-9b1e-1a78eb70e0a5" name="maestro-de-ingles-1 Test issue for Pycharm" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/models.py" afterDir="false" />
     </list>
     <list id="f6a09c30-afc9-48d0-bfd2-bc3cb6f334e0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />

@@ -1,5 +1,7 @@
 media
-venv/
 **/venv
 .task/
 secret
+**/*.pyc
+**/__pycache__
+**/db.sqlite3

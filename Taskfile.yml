@@ -64,3 +64,5 @@ tasks:
       status:
         - docker network ls | grep pgnetwork
 
+  todo:
+    charm README.md

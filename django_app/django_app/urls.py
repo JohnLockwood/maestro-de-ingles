@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+import debug_toolbar
 import common.views
 
 app_name = 'django_app'
@@ -23,5 +24,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('learn', include('learn.urls')),
-    path('', common.views.index, name='index')
+    path('', common.views.index, name='index'),
+    path('__debug__/', include(debug_toolbar.urls)),
 ]

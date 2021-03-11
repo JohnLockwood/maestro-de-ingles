@@ -29,3 +29,29 @@ class Vocabulary(LessonItem):
     native = models.CharField(max_length=255)
     audio = models.FileField(upload_to="vocabulary/", null=True)
 
+
+class Example(models.Model):
+    learning = models.CharField(max_length=65000)
+    native = models.CharField(max_length=65000)
+    audio = models.FileField(upload_to="examples/", null=True)
+
+
+class Unit(models.Model):
+    title = models.CharField(max_length=255)
+    draft = models.BooleanField(default=True)
+    created = models.DateTimeField('date created', auto_now_add=True)
+    updated = models.DateTimeField('date updated', auto_now=True)
+    material = models.ManyToManyField(Example, through='Material',
+                                      through_fields=('unit', 'example'))
+
+
+class Material(models.Model):
+    unit = models.ForeignKey(Unit, db_column="unit_id", related_name="Material_unit_object", on_delete=models.CASCADE)
+    example = models.ForeignKey(Example, db_column="example_id", related_name="Material_example_object", on_delete=models.CASCADE)
+    review_item = models.BooleanField(default=False)
+    kind = models.CharField(
+        max_length=12,
+        choices = (
+            ("vocab", "Vocabulary"),
+            ("sentence", "Sentence")
+    ))
